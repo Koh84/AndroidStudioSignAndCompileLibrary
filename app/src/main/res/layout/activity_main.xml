@@ -6,9 +6,204 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Print LOG" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="482dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Static IP Test" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="482dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="300dp"
+                android:text="Dynamic IP test" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="319dp">
+
+            <TextView
+                android:id="@+id/textView_StaticIP"
+                android:layout_width="482dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="300dp"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/editText_Static_IP"
+                android:layout_width="482dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="192.168.1.100" />
+
+            <EditText
+                android:id="@+id/editText_GW_IP"
+                android:layout_width="482dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText_Static_IP"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="192.168.1.1" />
+
+            <EditText
+                android:id="@+id/editText_Netmask"
+                android:layout_width="482dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText_GW_IP"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="255.255.255.0" />
+
+            <EditText
+                android:id="@+id/editText_DNS_IP"
+                android:layout_width="482dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText_Netmask"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="192.168.1.1" />
+
+            <EditText
+                android:id="@+id/editText_Proxy_IP"
+                android:layout_width="482dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText_DNS_IP"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="192.168.1.33" />
+
+            <EditText
+                android:id="@+id/editText_Proxy_Port"
+                android:layout_width="482dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText_Proxy_IP"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="8888" />
+
+            <EditText
+                android:id="@+id/editText_Proxy_Username"
+                android:layout_width="482dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText_Proxy_Port"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="myUser" />
+
+            <EditText
+                android:id="@+id/editText_Proxy_Password"
+                android:layout_width="482dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText_Proxy_Username"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="myPasscode" />
+
+            <CheckBox
+                android:id="@+id/checkBox_Proxy"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/buttonSetProxy"
+                android:layout_marginStart="518dp"
+                android:text="Enable Proxy" />
+
+            <CheckBox
+                android:id="@+id/checkBox_Auth"
+                android:layout_width="193dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/checkBox_Proxy"
+                android:layout_toStartOf="@+id/buttonSetProxy"
+                android:text="Enable Proxy Auth" />
+
+            <Button
+                android:id="@+id/buttonSetProxy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="359dp"
+                android:text="SetProxy" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_HTTP"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Test HTTP GET" />
+
+            <Button
+                android:id="@+id/button_HTTPS"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="500dp"
+                android:text="Test HTTPS GET" />
+
+            <Button
+                android:id="@+id/button_HTTPS2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="50dp"
+                android:text="Test HTTPS2 GET" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textView_PrintProgress"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView_PrintContent"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:text="" />
+
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
